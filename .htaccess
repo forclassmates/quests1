@@ -1,0 +1,13 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+Пояснение:
+#Включаем механизм преобразования
+RewriteEngine On
+#Задаем условие "в url указан путь файла?"
+RewriteCond %{REQUEST_FILENAME} !-f
+#Если да, то просто убираем html
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+RedirectPermanent https://forclassmates.github.io/quests1/kak_je_xochetsa_kanikuli https://forclassmates.github.io/quests1/quest1
